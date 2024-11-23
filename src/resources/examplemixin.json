@@ -3,6 +3,6 @@
     "minVersion": "0.8",
     "package": "berry.test.mixins",
     "compatibilityLevel": "JAVA_21",
-    "mixins": [ "SlimeGlitchUnfix" ],
+    "mixins": [ "SlimeGlitchUnfix", "JumpFix" ],
     "injectors": { "defaultRequire": 1 }
 }
