@@ -3,6 +3,6 @@
     "minVersion": "0.8",
     "package": "berry.test.mixins",
     "compatibilityLevel": "JAVA_21",
-    "mixins": [ "SlimeGlitchUnfix", "JumpFix" ],
+    "mixins": [ "SlimeGlitchUnfix", "LivingEntityFix", "KeyboardInputFix" ],
     "injectors": { "defaultRequire": 1 }
 }
