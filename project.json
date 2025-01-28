@@ -1,7 +1,8 @@
 {
+    "output_mod": "main",
     "packages": {
         "main": {
-            "dep": [ "download_berry" ],
+            "dep": [ "setup_berry" ],
             "cps": [
                 ".cache/client.jar",
                 ".cache/libs/",
@@ -23,8 +24,8 @@
             "function": "download_manifest",
             "repeat_everytime": false
         },
-        "download_berry": {
-            "function": "download_berry",
+        "setup_berry": {
+            "function": "setup_berry",
             "repeat_everytime": true
         },
         "download_minecraft": {
@@ -44,7 +45,7 @@
         },
         "setup_vscode": {
             "dep": [
-                "download_berry",
+                "setup_berry",
                 "download_minecraft",
                 "deobfuscate",
                 "download_dependencies"
@@ -59,7 +60,7 @@
             "function": "download_assets",
             "repeat_everytime": false
         },
-        "run_minecraft": {
+        "run_client": {
             "dep": [
                 "main",
                 "download_minecraft",
@@ -67,7 +68,17 @@
                 "download_dependencies",
                 "download_assets"
             ],
-            "function": "run_minecraft",
+            "function": "run_client",
+            "repeat_everytime": false
+        },
+        "run_server": {
+            "dep": [
+                "main",
+                "download_minecraft",
+                "deobfuscate",
+                "setup_berry"
+            ],
+            "function": "run_server",
             "repeat_everytime": false
         }
     }
