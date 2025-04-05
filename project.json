@@ -5,9 +5,9 @@
             "dep": [ "setup_berry" ],
             "cps": [
                 ".cache/client.jar",
-                ".cache/libs/",
                 ".cache/berry/",
-                ".cache/bundled/"
+                ".cache/bundled/",
+                "~/.berry/libraries/"
             ],
             "source": "main",
             "manifest": "main",
@@ -45,12 +45,20 @@
         },
         "setup_vscode": {
             "dep": [
-                "setup_berry",
                 "download_minecraft",
                 "deobfuscate",
                 "download_dependencies"
             ],
             "function": "setup_vscode",
+            "repeat_everytime": false
+        },
+        "setup_intellij": {
+            "dep": [
+                "download_minecraft",
+                "deobfuscate",
+                "download_dependencies"
+            ],
+            "function": "setup_intellij",
             "repeat_everytime": false
         },
         "download_assets": {

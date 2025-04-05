@@ -1,0 +1,8 @@
+{
+    "required": true,
+    "minVersion": "0.8",
+    "package": "berry.variant.mixins",
+    "compatibilityLevel": "JAVA_21",
+    "mixins": [ "SlimeGlitchUnfix", "LivingEntityFix", "EntityFix", "VariantCommandMixin" ],
+    "injectors": { "defaultRequire": 1 }
+}
